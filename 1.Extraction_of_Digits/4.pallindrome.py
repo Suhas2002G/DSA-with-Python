@@ -7,10 +7,8 @@ def check_pallindrome(n):
     while n>0:
         rev=rev*10+n%10
         n=n//10
-    if rev == num:
-        return True
-    else:
-        return False
+    return rev == num           # T or F
+     
 
 num = 188
 print(check_pallindrome(num))   #False    T.C.-->O(log N)
@@ -19,25 +17,15 @@ num = 181
 print(check_pallindrome(num))   #True
 
 '''
-Time Complexity
-The time complexity of an algorithm describes how the execution time grows as the input size increases.
+Time Complexity:
+The while loop runs once for each digit in the number `n`.
+In each iteration, we divide `n` by 10 (i.e., n = n // 10), so the number of iterations
+is equal to the number of digits in `n`, which is approximately log₁₀(n).
+Therefore, the time complexity is O(log n).
 
-Understanding the Loop: The core of the check_pallindrome function is the while n > 0: loop.
-Operations Inside the Loop:
-rev = rev * 10 + n % 10: These are constant-time arithmetic operations (multiplication, addition, modulo).
-n = n // 10: This is also a constant-time arithmetic operation (integer division).
-Number of Iterations: The loop continues as long as n is greater than 0. In each iteration, n is effectively divided by 10. This means the number of iterations is proportional to the number of digits in the input number n.
-Logarithmic Relationship: If a number n has d digits, then d is approximately log 10(n). 
-
-For example:
-If n = 10, d = 2.
-If n = 100, d = 3.
-If n = 1000, d = 4. The loop runs d times.
-Therefore, the time complexity is O(log N), where N is the value of the input number.
-
-Explanation:
-
-Each iteration of the loop reduces the number of digits in n by one. The number of iterations required to reduce n to 0 is directly proportional to the number of digits in n. Since the number of digits in n is roughly log 10(n), the time complexity is logarithmic.
+Space Complexity:
+We use only a constant amount of space (a few integer variables: num, rev, n),
+so the space complexity is O(1).
  '''
 
 
