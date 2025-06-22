@@ -2,6 +2,9 @@
 # NOTE : pallindrome mean from R-->L and from L-->R same, i.e 121 is pallindrome
 
 def check_pallindrome(n):
+    if n<0:   # all negative numbers are not pallindrome
+        return False
+    
     num = n
     rev=0
     while n>0:
