@@ -24,3 +24,6 @@ while n>0:
     n=n//10
 
 print(f"reverse number --> {rev}")
+
+
+
