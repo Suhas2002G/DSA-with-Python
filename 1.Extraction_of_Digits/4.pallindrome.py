@@ -32,11 +32,3 @@ so the space complexity is O(1).
  '''
 
 
-# check String is pallindome or not
-def str_pallindrome(str):
-    if str == str[::-1]:
-        print(1)
-    else:
-        print(0)
-
-str_pallindrome('nitin')
