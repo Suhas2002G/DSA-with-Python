@@ -8,3 +8,6 @@ def check_even_odd(n:int)->str:
 
 result = check_even_odd(2002)
 print(result)
+
+result = check_even_odd(20029)
+print(result)
